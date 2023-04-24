@@ -4,10 +4,10 @@ from PIL import Image, ImageTk
 import subprocess
 
 
-def animalRegister():
+def addPet():
     root = Tk()
 
-    root.title("Petshop Dog's")
+    root.title("Sofisticão Petshop")
     root.config(background='#FFFFFF')
     root.resizable(False, False)
     root.maxsize(width=1280, height=720)
@@ -20,19 +20,19 @@ def animalRegister():
 
     def open_home():
         root.destroy()
-        subprocess.run(["python", "main.py"])
+        subprocess.run(["python", "index.py"])
 
     def open_signup():
         root.destroy()
-        subprocess.run(["python", "signup.py"])
+        subprocess.run(["python", "register.py"])
 
     def open_animal_register():
         root.destroy()
-        subprocess.run(["python", "animalRegister.py"])
+        subprocess.run(["python", "addPet.py"])
 
     def open_services():
         root.destroy()
-        subprocess.run(["python", "services.py"])
+        subprocess.run(["python", "options.py"])
 
     def open_login():
         root.destroy()
@@ -215,4 +215,4 @@ def animalRegister():
     root.mainloop()
 
 
-animalRegister()
+addPet()

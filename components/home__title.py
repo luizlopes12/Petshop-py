@@ -1,26 +1,21 @@
 from tkinter import *
 import subprocess
 
-
-class TitleHome(Frame):
+class Hometitle(Frame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
         def open_signup():
             self.destroy()
-            subprocess.run(["python", "signup.py"])
+            subprocess.run(["python", "register.py"])
 
-        # main title
         main_title = Label(
-            self, text="Petshop Dog's", font="Inter 50 bold", fg="#18191F", bg="#FFFFFF", padx=10)
+            self, text="Sofisticão Petshop", font="Inter 50 bold", fg="#18191F", bg="#FFFFFF", padx=10)
         main_title.grid(row=0, column=0)
 
-        # subtitle
         subtitle = Label(
             self, text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc \n odio in et, lectus sit lorem id integer.", font="Inter 15 bold", fg="#18191F", bg="#FFFFFF", padx=10)
         subtitle.grid(row=2, column=0)
-
-        # button
 
         def on_enter(e):
             btn['background'] = '#A863F8'
